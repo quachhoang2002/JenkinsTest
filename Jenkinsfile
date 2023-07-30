@@ -26,7 +26,7 @@ pipeline {
 
     stage('build ') {
       steps {
-        sh 'docker ps '
+        sh 'pwd '
       }
     }
 
