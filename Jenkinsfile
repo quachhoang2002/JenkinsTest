@@ -8,9 +8,27 @@ pipeline {
     }
 
     stage('check folder ') {
-      steps {
-        sh 'ls -la '
+      parallel {
+        stage('check folder ') {
+          steps {
+            sh 'ls -la '
+          }
+        }
+
+        stage('hp') {
+          steps {
+            sh 'composer '
+          }
+        }
+
       }
     }
+
+    stage('build ') {
+      steps {
+        sh 'docker ps '
+      }
+    }
+
   }
 }
