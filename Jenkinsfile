@@ -17,7 +17,7 @@ pipeline {
 
         stage('hp') {
           steps {
-            sh 'composer '
+            sh 'echo "hello my friend " '
           }
         }
 
